@@ -18,6 +18,5 @@ services:
         build: ./php
         volumes:
             - ./www:/usr/share/nginx/html
-            - ./php/php.ini:/usr/local/etc/php/php.ini
             - ./php/logs:/usr/local/var/log
         restart: always
