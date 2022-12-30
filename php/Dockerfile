@@ -25,5 +25,7 @@ RUN pecl install mongodb \
 ENV COMPOSER_HOME /root/composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 ENV PATH $COMPOSER_HOME/vendor/bin:$PATH
+
+RUN cp /usr/local/etc/php/php.ini-production /usr/local/etc/php/php.ini
  
 WORKDIR /data
